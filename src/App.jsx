@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import About from './components/About'
 import Game from './components/Game'
 import Footer from './components/Footer'
+import Donate from './components/Donate';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
     <Header />
     <About />
     <Game />
+    <Donate />
     <Footer />
     </>
   )
@@ -39,7 +41,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
   }
 
