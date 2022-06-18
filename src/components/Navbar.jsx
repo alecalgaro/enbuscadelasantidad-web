@@ -36,15 +36,15 @@ const NavContainer = styled.nav`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 4rem;
+  height: 4.2rem;
   z-index: 10;
 
   a{
     color: var(--black);
     display: block;
-    font-size: 1rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 500;
     margin: .5rem .5rem 0 .5rem;
     text-decoration: none;
     transition: letter-spacing .3s;
@@ -56,7 +56,7 @@ const NavContainer = styled.nav`
 
   @media(min-width: 576px){
     a{
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       margin: .5rem 1rem 0 1rem;
     }
   }

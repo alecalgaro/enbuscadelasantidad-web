@@ -28,8 +28,8 @@ const Header = () => {
             Infancia y Adolescencia Misionera (IAM), todo esto haciendo algo que seguro te gusta... ¡Jugar!</p>
           
           <Buttons>
-            <button>Trailer</button>
-            <button>Jugar</button>
+            <button><a href="https://drive.google.com/file/d/1q4pKuPM2Flax5hUr6_GQjakA33gcMS8d/view?usp=sharing" target="_blank">Trailer</a></button>
+            <button><a href="#play">Jugar</a></button>
           </Buttons>
         </HeaderDescription>
 
@@ -92,7 +92,7 @@ const HeaderDescription = styled(motion.div)`
 
   h1{
     font-size: 2.5rem;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
   }
 
@@ -107,6 +107,9 @@ const HeaderDescription = styled(motion.div)`
 
   @media(min-width: 768px){
     width: 70%;
+    
+    h1{ font-size: 3rem; }
+
   }
 
   @media(min-width: 1200px){
@@ -125,10 +128,12 @@ const Buttons = styled(motion.div)`
     width: 9rem;
     height: 3rem;
     font-size: 1.8rem;
-    color: var(--white);
+    font-weight: 300;
     border-radius: 1rem;
     cursor: pointer;
     transition: all .5s;
+
+    a{ color: var(--white); }
 
     &:hover{
       letter-spacing: .2rem;

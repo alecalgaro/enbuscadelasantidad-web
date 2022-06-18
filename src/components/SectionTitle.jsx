@@ -9,14 +9,17 @@ const SectionTitle = ({title}) => {
 
 export default SectionTitle
 
-const Title = styled.div`
-    font-size: 3rem;
-    font-weight: 600;
+const Title = styled.h2`
+    font-size: 4rem;
+    font-weight: 700;
     text-transform: uppercase;
     position: relative;
-    margin: 3rem 0;
+    margin: 5rem 0;
     letter-spacing: .2rem;
-    border-bottom: 4px solid var(--amarillo);
-    color: var(--black);
-    text-shadow: 1px 1px 2px var(--grey);
+    color: var(--amarillo);
+    text-shadow: 4px 3px 0px var(--rojo);
+    
+    @media(min-width: 768px){
+      font-size: 5rem;
+    }
 `

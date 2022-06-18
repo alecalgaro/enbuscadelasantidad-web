@@ -104,16 +104,12 @@ const GameContainer = styled.section`
     @media(min-width: 768px){
       width: 80%;
     }
-
-    @media(min-width: 992px){
-      width: 60%;
-    }
   }
 
   p{
     font-size: 1.5rem;
     text-align: center;
-    margin: 2rem 0;
+    margin: 3rem 0;
     color: var(--grey-text);
     width: 90%;
 
@@ -131,7 +127,7 @@ const IconContainer = styled.div`
   gap: 3rem;
 
   @media(min-width: 768px){
-    margin: 3rem 2rem 0 2rem;
+    margin: 2rem 2rem 0 2rem;
   }
 
   .icon-flecha { width: 20%; }
@@ -142,17 +138,17 @@ const Button = styled.button`
   width: 12rem;
   height: 3rem;
   font-size: 1.8rem;
+  font-weight: 300;
   color: var(--white);
   border-radius: 1rem;
   cursor: pointer;
   transition: all .5s;
-  background: var(--celeste);
 
   &.btn-cel{ background: var(--rojo); }
   &.btn-pc{ background: var(--amarillo); }
   &.btn-online{ background: var(--celeste); }
 
   &:hover{
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
   }
 `
