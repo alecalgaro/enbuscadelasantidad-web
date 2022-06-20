@@ -6,7 +6,7 @@ import iconDonate from '../img/icons/icono-colaborar.webp'
 
 const Donate = () => {
   return (
-    <DonateContainer>
+    <DonateContainer id="donate">
         <SectionTitle title="Colaborar"/>
 
         <div className='contenido'>
@@ -38,16 +38,18 @@ const DonateContainer = styled.section`
   margin: 0 .5rem 0 .5rem;
 
   .contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     @media(min-width: 768px){
-        display: flex;
         flex-direction: row;
-        justify-content: center;
-        align-items: center;
     }
   }
 `
 
-const Card = styled.section`
+const Card = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,12 +66,14 @@ const Card = styled.section`
         font-size: 2rem;
         text-align: center;
         margin: 0;
+        color: var(--grey-text);
     }
 
     p{ 
         font-size: 1.6rem;
         text-align: center;
         margin: 2rem; 
+        color: var(--grey-text);
     }
 
     button{

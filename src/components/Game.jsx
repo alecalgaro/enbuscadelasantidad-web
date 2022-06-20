@@ -15,6 +15,7 @@ import iconFlecha from '../img/icons/flecha.png'
 
 const Game = () => {
   return (
+    <>
       <GameContainer id='play'>
         <SectionTitle title="Juego"/>
 
@@ -24,7 +25,7 @@ const Game = () => {
           (Te recomendamos descargarlo para evitar cualquier error al cargar el juego).
           </p>
 
-          <Carousel className="col-11 col-lg-9 shadow-lg bg-light rounded">
+          <Carousel className="col-11 col-lg-9 mb-5 shadow-lg bg-light rounded">
             <Carousel.Item>
               <img
                 className="d-block w-100"
@@ -61,24 +62,27 @@ const Game = () => {
               />
             </Carousel.Item>
           </Carousel>
-
-          <IconContainer>
-            <img src={iconCel} alt="icono celular"></img>
-            <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
-            <Button className='btn-cel'>Descargar</Button>
-          </IconContainer>
-          <IconContainer>
-            <img src={iconPC} alt="icono computadora"></img>
-            <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
-            <Button className='btn-pc'>Descargar</Button>
-          </IconContainer>
-          <IconContainer className="pb-5">
-            <img src={iconOnline} alt="icono online"></img>
-            <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
-            <Button className='btn-online'>Jugar</Button>
-          </IconContainer>
         </div>
       </GameContainer>
+      
+      <Buttons>
+        <IconContainer>
+          <img src={iconCel} alt="icono celular"></img>
+          <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
+          <Button className='btn-cel'>Descargar</Button>
+        </IconContainer>
+        <IconContainer>
+          <img src={iconPC} alt="icono computadora"></img>
+          <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
+          <Button className='btn-pc'>Descargar</Button>
+        </IconContainer>
+        <IconContainer>
+          <img src={iconOnline} alt="icono online"></img>
+          <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
+          <Button className='btn-online'>Jugar</Button>
+        </IconContainer>
+      </Buttons>
+    </>
   )
 }
 
@@ -100,6 +104,7 @@ const GameContainer = styled.section`
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     width: 90%;
+    margin-bottom: 2rem;
 
     @media(min-width: 768px){
       width: 80%;
@@ -118,19 +123,26 @@ const GameContainer = styled.section`
     }
   }
 `
+const Buttons = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+`
 
 const IconContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 5rem 2rem 0 2rem;
-  gap: 3rem;
+  margin: 4rem 2rem 0 2rem;
+  gap: 2rem;
 
   @media(min-width: 768px){
     margin: 2rem 2rem 0 2rem;
   }
 
-  .icon-flecha { width: 20%; }
+  .icon-flecha { width: 18%; }
 `
 
 const Button = styled.button`

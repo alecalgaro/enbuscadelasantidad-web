@@ -1,23 +1,31 @@
 import React from 'react'
 import { createGlobalStyle } from 'styled-components'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import About from './components/About'
 import Game from './components/Game'
 import Footer from './components/Footer'
-import Donate from './components/Donate';
+import Donate from './components/Donate'
+import Contact from './components/Contact'
 
 function App() {
   return (
     <>
     <GlobalStyle />
     <Navbar />
-    <Header />
-    <About />
-    <Game />
-    <Donate />
-    <Footer />
+    <header>
+      <Header />  
+    </header>
+    <body>
+      <About />
+      <Game />
+      <Donate />
+      <Contact />  
+    </body>
+    <footer>
+      <Footer />
+    </footer>
     </>
   )
 }
@@ -44,6 +52,8 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
   }
+
+  body{ background: none; }   // para que se vea el fondo de nubes
 
   html {
     font-size: 62.5%;

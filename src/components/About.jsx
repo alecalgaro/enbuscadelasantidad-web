@@ -5,8 +5,6 @@ import SectionTitle from './SectionTitle'
 import imgAbout from '../img/about.webp'
 import iconInstagram from '../img/icons/icono-instagram.webp'
 
-import { motion } from "framer-motion"
-
 const About = () => {
   return (
       <AboutContainer id='about'>
@@ -28,17 +26,15 @@ const About = () => {
 
 export default About;
 
-const AboutContainer = styled(motion.section)`
+const AboutContainer = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0 .5rem;
-  /* position: absolute;
-  top: 100%; */
 `
 
-const AboutCard = styled(motion.div)`
+const AboutCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;

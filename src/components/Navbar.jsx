@@ -45,7 +45,7 @@ const NavContainer = styled.nav`
     font-size: 1.2rem;
     text-transform: uppercase;
     font-weight: 500;
-    margin: .5rem .5rem 0 .5rem;
+    margin: .5rem .6rem 0 .6rem;
     text-decoration: none;
     transition: letter-spacing .3s;
       
