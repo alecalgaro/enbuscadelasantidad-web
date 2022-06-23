@@ -1,27 +1,29 @@
 import React from 'react'
 import styled from 'styled-components'
 import SectionTitle from './SectionTitle'
-
+import data from './data.json'
 import iconDonate from '../img/icons/icono-colaborar.webp'
 
-const Donate = () => {
+const Donate = ({i}) => {
   return (
     <DonateContainer id="donate">
-        <SectionTitle title="Colaborar"/>
+        <SectionTitle title={data[i].title_donate}/>
+
+        <p className='description'>{data[i].donate}</p>
 
         <div className='contenido'>
             <Card>
                 <img src={iconDonate} alt="Icono colaborar" />
-                <h3>Mercado pago</h3>
-                <p>En Argentina podes colaborar mediante la plataforma de “Cafecito.app” eligiendo el monto o mediante el CVU.</p>
-                <button>Colaborar</button>
+                <h3>{data[i].mercado_pago}</h3>
+                <p>{data[i].mercado_pago2}</p>
+                <button>{data[i].title_donate}</button>
             </Card>
 
             <Card>
                 <img src={iconDonate} alt="Icono colaborar" />
-                <h3>Paypal</h3>
-                <p>Fuera de Argentina podes colaborar mediante la plataforma de “Paypal” eligiendo el monto que quieras donar.</p>
-                <button>Colaborar</button>
+                <h3>{data[i].paypal}</h3>
+                <p>{data[i].paypal2}</p>
+                <button>{data[i].title_donate}</button>
             </Card>
         </div>
     </DonateContainer>
@@ -36,6 +38,18 @@ const DonateContainer = styled.section`
   justify-content: center;
   align-items: center;
   margin: 0 .5rem 0 .5rem;
+
+  .description{
+    font-size: 1.6rem;
+    color: var(--grey-text);
+    width: 85%;
+    text-align: center;
+    margin-bottom: 2rem;
+
+    @media(min-width: 992px){
+      width: 50%;
+    }
+  }
 
   .contenido {
     display: flex;

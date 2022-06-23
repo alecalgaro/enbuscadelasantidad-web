@@ -1,25 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import data from './data.json'
 import SectionTitle from './SectionTitle'
 import iconInstagram from '../img/icons/icono-instagram.webp'
 
-const Contact = () => {
+const Contact = ({i}) => {
   return (
     <ContactContainer id="contact">
-        <SectionTitle title="Contacto" />
+        <SectionTitle title={data[i].title_contact} />
         
-        <p>Por cualquier consulta o sugerencia, podes comunicarte con nosotros enviando tu mensaje o escribiéndonos en nuestras redes sociales.</p>
+        <p>{data[i].contact}</p>
         
         <div className='contact'>
 
           <div className='instagram'>
-            <h4>Instagram</h4>
+            <h4>{data[i].instagram}</h4>
             <a href="https://www.instagram.com/enbuscade.lasantidad"><img src={iconInstagram} alt="Icono instagram" className="icon"/></a>
           </div>
           
           <div className='form'>
-            <h4>Formulario de contacto</h4>
+            <h4>{data[i].form}</h4>
             <form className="col-12 col-md-10 col-lg-8" id="formulario">
                 {/* Clave para el envío con web3forms. Se puede cambiar la clave desde la página, sin registro, solo poniendo un correo */}
                 <input type="hidden" name="apikey" value="8a503d3c-c02a-4a1d-a5f7-036ad98b9f94" />
@@ -27,18 +27,18 @@ const Contact = () => {
                 <input type="hidden" name="from_name" value="En busca de la santidad" />
 
                 <div class="mb-3">
-                    <label for="email" className="form-label">Correo electrónico</label>
+                    <label for="email" className="form-label">{data[i].email}</label>
                     <input type="email" className="form-control" id="email" name="email" placeholder="Tu correo" required />
                 </div>
                 <div class="mb-3">
-                    <label for="nombre" className="form-label">Nombre</label>
+                    <label for="nombre" className="form-label">{data[i].name}</label>
                     <input type="nombre" className="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
                 </div>
                 <div class="mb-3">
-                    <label for="mensaje" className="form-label">Mensaje</label>
+                    <label for="mensaje" className="form-label">{data[i].message}</label>
                     <textarea className="form-control" id="mensaje" rows="3" name="mensaje" placeholder="Tu mensaje" required></textarea>
                 </div>
-                <button type="submit" name="enviar" id="submit">Enviar</button>
+                <button type="submit" name="enviar" id="submit">{data[i].send}</button>
             </form>
           </div>
         </div>
@@ -83,7 +83,7 @@ const ContactContainer = styled.section`
     }
 
     h4{
-      font-size: 2rem;
+      font-size: 2.4rem;
       color: var(--amarillo);
       margin-bottom: 2rem;
       text-align: center;
@@ -103,8 +103,8 @@ const ContactContainer = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
-    label, input, textarea{ font-size: 1.6rem; }
+    width: 90%;
+    label, input, textarea{ font-size: 1.5rem; }
 
     @media(min-width: 992px){
       width: 60%;

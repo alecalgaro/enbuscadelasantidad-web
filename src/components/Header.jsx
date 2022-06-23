@@ -2,10 +2,21 @@ import React from 'react'
 import styled from 'styled-components'
 import imgBackgroud from '../img/bg-header.webp'
 import imgLogoHeader from '../img/logo-header.webp'
+import iconSpanish from '../img/icons/icon-español.png'
+import iconInglish from '../img/icons/icon-ingles.png'
+import iconItalian from '../img/icons/icon-italiano.png'
+import iconPortuguese from '../img/icons/icon-portugues.png'
+import iconFrench from '../img/icons/icon-frances.png'
+import data from './data.json'
 
 import { motion } from "framer-motion"
 
-const Header = () => {
+const saveLanguage = (language) => {
+  localStorage.setItem('language', language);
+  window.location.reload();   // actualiza la pagina
+}
+
+const Header = ({i}) => {
   return (
     <>
       <ImageBackground src={imgBackgroud} className="img-background" alt="imagen de fondo" />
@@ -21,18 +32,24 @@ const Header = () => {
 
         <HeaderDescription>
           <h1>
-            <span>Te damos la bienvenida a</span><br /> 
-                  EN BUSCA DE LA SANTIDAD
+            <span>{data[i].header1}</span><br /> 
+                  {data[i].header2}
           </h1>
-          <p>Te invitamos a esta nueva aventura, en la cual nos vamos a divertir y aprender cosas importantes sobre la 
-            Infancia y Adolescencia Misionera (IAM), todo esto haciendo algo que seguro te gusta... ¡Jugar!</p>
+          <p>{data[i].header3}</p>
           
           <Buttons>
-            <button><a href="https://drive.google.com/file/d/1q4pKuPM2Flax5hUr6_GQjakA33gcMS8d/view?usp=sharing" target="_blank">Trailer</a></button>
-            <button><a href="#play">Jugar</a></button>
+            <button><a href="https://drive.google.com/file/d/1q4pKuPM2Flax5hUr6_GQjakA33gcMS8d/view?usp=sharing" target="_blank">{data[0].btn_trailer}</a></button>
+            <button><a href="#play">{data[0].btn_play}</a></button>
           </Buttons>
         </HeaderDescription>
 
+        <LanguagesButtons>
+          <button onClick={() => saveLanguage('español')}><img src={iconSpanish} alt="icono español"/></button> 
+          <button onClick={() => saveLanguage('ingles')}><img src={iconInglish} alt="icono ingles"/></button>
+          <button onClick={() => saveLanguage('italiano')}><img src={iconItalian} alt="icono italiano"/></button>
+          <button onClick={() => saveLanguage('portugues')}><img src={iconPortuguese} alt="icono portugues"/></button>
+          <button onClick={() => saveLanguage('frances')}><img src={iconFrench} alt="icono frances"/></button>
+        </LanguagesButtons>
       </HeaderContainer>
     </>
   )
@@ -67,7 +84,7 @@ const Logo = styled(motion.div)`
       animation: logo 1.85s infinite alternate-reverse;
 
       @media (min-width: 756px) {
-          width: 40rem;
+          width: 35rem;
       }
 
       @media (min-width: 992px) {
@@ -139,4 +156,18 @@ const Buttons = styled(motion.div)`
       letter-spacing: .2rem;
     }
   } 
+`
+
+const LanguagesButtons = styled.div`
+    display: flex;
+    position: absolute;
+    top: 4.2rem;
+    gap: 1rem;
+
+    button{
+      border: none;
+      background: none;
+      cursor: pointer;
+      transform: scale(0.8);
+    }
 `

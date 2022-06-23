@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SectionTitle from './SectionTitle'
 import { Carousel } from 'react-bootstrap';
-
+import data from './data.json'
 import slide_1 from '../img/slide-1.webp'
 import slide_2 from '../img/slide-2.webp'
 import slide_3 from '../img/slide-3.webp'
@@ -13,16 +13,15 @@ import iconPC from '../img/icons/icono-compu.webp'
 import iconOnline from '../img/icons/icono-online.webp'
 import iconFlecha from '../img/icons/flecha.png'
 
-const Game = () => {
+const Game = ({i}) => {
   return (
     <>
       <GameContainer id='play'>
-        <SectionTitle title="Juego"/>
+        <SectionTitle title={data[i].title_game}/>
 
         <div className='contenido'>
-          <p>La idea de este videojuego es acompañar a tu personaje en el camino hacia la santidad, recorriendo el maravilloso mundo de la Infancia y Adolescencia Misionera.
-          Lo podrás descargar en tu dispositivo móvil, en tu computadora o jugarlo de forma online sin descargar. 
-          (Te recomendamos descargarlo para evitar cualquier error al cargar el juego).
+          <p>{data[i].play1}
+            <br />{data[i].play2}
           </p>
 
           <Carousel className="col-11 col-lg-9 mb-5 shadow-lg bg-light rounded">
@@ -69,17 +68,17 @@ const Game = () => {
         <IconContainer>
           <img src={iconCel} alt="icono celular"></img>
           <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
-          <Button className='btn-cel'>Descargar</Button>
+          <Button className='btn-cel'>{data[i].btn_download}</Button>
         </IconContainer>
         <IconContainer>
           <img src={iconPC} alt="icono computadora"></img>
           <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
-          <Button className='btn-pc'>Descargar</Button>
+          <Button className='btn-pc'>{data[i].btn_download}</Button>
         </IconContainer>
         <IconContainer>
           <img src={iconOnline} alt="icono online"></img>
           <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
-          <Button className='btn-online'>Jugar</Button>
+          <Button className='btn-online'>{data[i].btn_play}</Button>
         </IconContainer>
       </Buttons>
     </>
@@ -129,6 +128,10 @@ const Buttons = styled.div`
   justify-content: center;
   align-items: center;
   margin: 0 2rem;
+
+  @media(min-width: 992px){
+    flex-direction: row;
+  }
 `
 
 const IconContainer = styled.div`

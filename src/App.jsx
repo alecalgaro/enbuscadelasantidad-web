@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { createGlobalStyle } from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Header from './components/Header'
@@ -10,21 +10,37 @@ import Donate from './components/Donate'
 import Contact from './components/Contact'
 
 function App() {
+
+  const [language, setLanguage] = useState('español');
+  var i = 0;
+  
+  useEffect(() => {
+    setLanguage(localStorage.getItem('language'));
+  }, []);
+  
+  // A los componentes se les pasa "i" para elegir que lenguaje tomar del .json, para evitar evaluar cosas en cada componente
+  { language == 'español' ? i = 0
+    : language == 'ingles' ? i = 1
+    : language == 'italiano' ? i = 2
+    : language == 'portugues' ? i = 3
+    : i = 4
+  }
+
   return (
     <>
     <GlobalStyle />
-    <Navbar />
+    <Navbar i={i}/>
     <header>
-      <Header />  
+      <Header i={i}/>  
     </header>
     <body>
-      <About />
-      <Game />
-      <Donate />
-      <Contact />  
+      <About i={i}/>
+      <Game i={i}/>
+      <Donate i={i}/>
+      <Contact i={i}/>  
     </body>
     <footer>
-      <Footer />
+      <Footer i={i}/>
     </footer>
     </>
   )
@@ -61,7 +77,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   section[id] {
-    scroll-margin-top: 50px;
+    scroll-margin-top: 20px;
   }
 
   a {

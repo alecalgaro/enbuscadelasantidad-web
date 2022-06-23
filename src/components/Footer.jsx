@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import data from './data.json'
 
-const Footer = () => {
+const Footer = ({i}) => {
   return (
     <FooterContainer>
         <p>
-            Sitio web diseñado y creado por <br /> <a href="https://www.instagram.com/alecalgaro">Alejandro Calgaro</a> y <a href="https://www.instagram.com/click.creando">Guadalupe Rodriguez</a>
-            <br /> <i>Se reserva el uso del contenido del videojuego y de este sitio web solo para fines pastorales.</i>
+          {data[i].footer1} <br /> <a href="https://www.instagram.com/alecalgaro">{data[i].footer2}</a><a href="https://www.instagram.com/click.creando">{data[i].footer3}</a>
+            <br /> <i>{data[i].footer4}</i>
         </p>
     </FooterContainer>
   )

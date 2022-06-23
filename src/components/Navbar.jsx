@@ -3,20 +3,20 @@ import styled from 'styled-components'
 import data from './data.json'
 import imgLogo from '../img/logo.webp'
 
-function Navbar() {
+function Navbar({i}) {
 
   return (
     <>
       <NavContainer>
         <>
           <div className='menu_izq'>
-            <a href="#about">{data[0].nav_about}</a>
-            <a href="#play">{data[0].nav_play}</a>
+            <a href="#about">{data[i].nav_about}</a>
+            <a href="#play">{data[i].nav_play}</a>
           </div>
             <a href="#home"><img src={imgLogo} alt="logo helios" /></a>
           <div className='menu_der'>
-            <a href="#donate">{data[0].nav_donate}</a>
-            <a href="#contact">{data[0].nav_contact}</a>
+            <a href="#donate">{data[i].nav_donate}</a>
+            <a href="#contact">{data[i].nav_contact}</a>
           </div>
         </>
       </NavContainer>

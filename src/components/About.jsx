@@ -1,19 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
 import SectionTitle from './SectionTitle'
-
+import data from './data.json'
 import imgAbout from '../img/about.webp'
 import iconInstagram from '../img/icons/icono-instagram.webp'
 
-const About = () => {
+const About = ({i}) => {
   return (
       <AboutContainer id='about'>
-          <SectionTitle title="Nosotros"/>
+          <SectionTitle title={data[i].title_about}/>
           <AboutCard>
               <img src={imgAbout} alt="Foto de nosotros" />
               <div className='about-description'>
-                <p>¡Hola! Somos Guadalupe Rodriguez (estudiante de Licenciatura en Diseño de la Comunicación Visual) y Alejandro Calgaro (estudiante de Ingeniería en Informática). 
-                  <br /> Ambos somos animadores de la Infancia y Adolescente Misionera, que buscamos utilizar nuestros estudios y las cosas que nos gustan hacer, para evangelizar.</p>
+                <p>{data[i].about1} 
+                  <br />{data[i].about2}</p>
                 <div className='instagram'>
                     <a href="https://www.instagram.com/click.creando"><img src={iconInstagram} alt="Icono instagram" className="icon"/></a>
                     <a href="https://www.instagram.com/alecalgaro"><img src={iconInstagram} alt="Icono instagram" className="icon"/></a>
@@ -42,11 +42,11 @@ const AboutCard = styled.div`
   width: 90%;
   background-color: var(--bg-grey);
   border-radius: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) ipx 3px 8px;
 
   img {
       width: 95%;
-      padding: 2rem 0;
+      padding: 2rem i;
   }
 
   p {
