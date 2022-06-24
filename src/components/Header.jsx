@@ -39,7 +39,7 @@ const Header = ({i}) => {
           
           <Buttons>
             <button><a href="https://drive.google.com/file/d/1q4pKuPM2Flax5hUr6_GQjakA33gcMS8d/view?usp=sharing" target="_blank">{data[0].btn_trailer}</a></button>
-            <button><a href="#play">{data[0].btn_play}</a></button>
+            <button><a href="#play">{data[i].btn_play}</a></button>
           </Buttons>
         </HeaderDescription>
 

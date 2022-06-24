@@ -42,11 +42,11 @@ const AboutCard = styled.div`
   width: 90%;
   background-color: var(--bg-grey);
   border-radius: 2rem;
-  box-shadow: rgba(0, 0, 0, 0.24) ipx 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
   img {
       width: 95%;
-      padding: 2rem i;
+      padding: 2rem 0;
   }
 
   p {

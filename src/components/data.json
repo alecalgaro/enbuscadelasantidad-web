@@ -46,5 +46,103 @@
         "cookies": "Utilizamos cookies para obtener estadísticas y mejorar nuestro sitio.",
         "accept": "Aceptar",
         "more": "Leer más"
+    },
+
+    {
+        "language": "italiano",
+		"nav_about": "Noi",
+        "nav_play": "Gioco",
+        "nav_donate": "Collaborare",
+        "nav_contact": "Contatto",
+
+        "header1": "Vi diamo il benvenuto a",
+        "header2": "ALLA RICERCA DELLA SANTITÀ",
+        "header3": "Vi invitiamo a questa nuova avventura, in cui ci divertiremo e impareremo cose importanti sull'Infanzia Missionaria, il tutto facendo qualcosa che siamo sicuri vi piacerà… Giocare!",
+        "btn_trailer": "Trailer",
+        "btn_play": "Gioco",
+
+        "title_about": "Noi",
+        "about1": "Ciao. Siamo Guadalupe Rodriguez (studente di Visual Communication Design) e Alejandro Calgaro (studente di Ingegneria Informatica).",
+        "about2": "Siamo entrambi animatori dell'Infanzia Missionaria in Argentina, che cercano di utilizzare i nostri studi e le cose che ci piace fare per evangelizzare.",
+
+        "title_game": "Gioco",
+        "play1": "L'idea di questo videogioco è quella di accompagnare il proprio personaggio nel percorso verso la santità, viaggiando attraverso il meraviglioso mondo dell'Infanzia Missionaria. Potete scaricarlo sul vostro dispositivo mobile, sul vostro computer o giocarlo online senza scaricarlo.", 
+        "play2": "(Si consiglia di scaricare per evitare errori durante il caricamento del gioco).",
+        "btn_download": "Scaricare",
+        "tutorial": "Tutorial",
+
+        "title_donate": "Collaborare",
+        "donate": "Se desiderate collaborare con noi, potete farlo attraverso i seguenti mezzi o contattandoci per coordinarvi. Grazie mille!",
+        "mercado_pago": "Mercado Pago",
+        "mercado_pago2": "Dall'Argentina è possibile collaborare attraverso la piattaforma 'Cafecito.app' scegliendo l'importo che si desidera donare, oppure attraverso la CVU.",
+        "paypal": "Paypal",
+        "paypal2": "Fuori dall'Argentina è possibile collaborare attraverso la piattaforma 'Paypal' scegliendo l'importo che si desidera donare.",
+        
+        "title_contact": "Contatto",
+        "contact": "Se avete domande o suggerimenti, potete contattarci inviando un messaggio o scrivendoci sui nostri social network.",
+        "instagram": "Instagram",
+        "form": "Modulo di contatto",
+        "email": "Indirizzo e-mail",
+        "name": "Nome",
+        "message": "Messaggio",
+        "send": "Inviare",
+
+        "footer1": "Sito web progettato e realizzato da",
+        "footer2": "Alejandro Calgaro ",
+        "footer3": "y Guadalupe Rodriguez",
+        "footer4": "L'uso del contenuto del videogioco e di questo sito web è riservato esclusivamente a scopi pastorali.",
+
+        "cookies": "Utilizziamo i cookie per ottenere statistiche e migliorare il nostro sito.",
+        "accept": "Accettare",
+        "more": "Per saperne di più"
+    },
+
+    {
+        "language": "portugues",
+		"nav_about": "SOBRE NÓS",
+        "nav_play": "JOGO",
+        "nav_donate": "COLABORAR",
+        "nav_contact": "CONTATO",
+
+        "header1": "Seja bem-vindo ao",
+        "header2": "EM BUSCA DA SANTIDADE",
+        "header3": "Te convidamos para esta nova aventura, onde vamos nos divertir e aprender mais sobre a Infância e Adolescência Missionária (IAM), tudo isto fazendo algo que você gosta... jogar!",
+        "btn_trailer": "Trailer",
+        "btn_play": "Jogar",
+
+        "title_about": "SOBRE NÓS",
+        "about1": "Olá! somos Guadalupe Rodriguez (estudante de Design de Comunicação Visual) e Alejandro Calgaro (estudante de Engenharia Informática).",
+        "about2": "Somos ambos animadores da Infância e Adolescência Missionária na Argentina, e procuramos usar nosso conhecimento e coisas que gostamos de fazer para evangelizar.",
+
+        "title_game": "JOGO",
+        "play1": "A ideia desse jogo de vídeo é acompanhar a sua personagem no caminho da santidade, viajando através do maravilhoso mundo da Infância e Adolescência Missionária. Pode descarregá-lo no seu dispositivo móvel, no seu computador ou jogá-lo online sem descarregar.", 
+        "play2": "Recomendamos fazer o download para evitar qualquer erro ao carregar o jogo. ",
+        "btn_download": "Download",
+        "tutorial": "Tutorial",
+
+        "title_donate": "Colaborar",
+        "donate": "Se você quiser colaborar para que possamos continuar mantendo essa página e seguir criando jogos e mais conteúdos como este, você pode fazê-lo a partir dos seguintes meios ou entrando em contato conosco. Muito obrigado!",
+        "mercado_pago": "Mercado Pago",
+        "mercado_pago2": "Se você estiver na Argentina: ao pressionar o botão abaixo abrirá a plataforma “Cafecito.app”. Ali poderá escolher o valor que deseja doar e utilizar qualquer forma de pagamento.",
+        "paypal": "Paypal",
+        "paypal2": "Se você não estiver na Argentina: ao pressionar o botão abaixo abrirá a plataforma do PayPal, onde poderá escolher o valor que deseja doar e realizar o pagamento na própria plataforma.",
+        
+        "title_contact": "CONTATO",
+        "contact": "Para qualquer dúvida, consulta, sugestão ou se quiser contar o que achou do jogo, você pode entrar em contato conosco enviando sua mensagem com o seguinte formulário ou escrevendo em nossas redes sociais.",
+        "instagram": "Instagram",
+        "form": "Formulário de contato",
+        "email": "E-mail",
+        "name": "Nome",
+        "message": "Mensagem",
+        "send": "Enviar ",
+
+        "footer1": "Site web desenhado e criado por",
+        "footer2": "Alejandro Calgaro ",
+        "footer3": "e Guadalupe Rodriguez",
+        "footer4": "É reservado o uso do conteúdo do jogo e desse site web apenas para fins pastorais.",
+
+        "cookies": "Utilizamos cookies para obter estatísticas e melhorar nosso site.",
+        "accept": "Aceitar",
+        "more": "Ler mais"
     }
 ]

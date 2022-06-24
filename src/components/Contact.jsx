@@ -26,17 +26,17 @@ const Contact = ({i}) => {
                 {/* Asunto al recibir el mensaje con web3forms */}
                 <input type="hidden" name="from_name" value="En busca de la santidad" />
 
-                <div class="mb-3">
-                    <label for="email" className="form-label">{data[i].email}</label>
-                    <input type="email" className="form-control" id="email" name="email" placeholder="Tu correo" required />
+                <div className="mb-3">
+                    <label htmlFor="email" className="form-label">{data[i].email}</label>
+                    <input type="email" className="form-control" id="email" name="email" placeholder={data[i].email} required />
                 </div>
-                <div class="mb-3">
-                    <label for="nombre" className="form-label">{data[i].name}</label>
-                    <input type="nombre" className="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required />
+                <div className="mb-3">
+                    <label htmlFor="nombre" className="form-label">{data[i].name}</label>
+                    <input type="nombre" className="form-control" id="nombre" name="nombre" placeholder={data[i].name} required />
                 </div>
-                <div class="mb-3">
-                    <label for="mensaje" className="form-label">{data[i].message}</label>
-                    <textarea className="form-control" id="mensaje" rows="3" name="mensaje" placeholder="Tu mensaje" required></textarea>
+                <div className="mb-3">
+                    <label htmlFor="mensaje" className="form-label">{data[i].message}</label>
+                    <textarea className="form-control" id="mensaje" rows="3" name="mensaje" placeholder={data[i].message} required></textarea>
                 </div>
                 <button type="submit" name="enviar" id="submit">{data[i].send}</button>
             </form>
