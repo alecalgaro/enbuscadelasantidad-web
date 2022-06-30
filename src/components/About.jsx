@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import SectionTitle from './SectionTitle'
 import data from './data.json'
-import imgAbout from '../img/about.webp'
-import iconInstagram from '../img/icons/icono-instagram.webp'
+import imgAbout from '../img/img-about.webp'
+import iconInstagram from '../img/icons/icon-instagram.png'
 
 const About = ({i}) => {
   return (
@@ -64,7 +64,7 @@ const AboutCard = styled.div`
   }
 
   img.icon{ 
-      width: 4rem;
+      width: 3.5rem;
       padding: 0 0 2rem 0; 
     }
 

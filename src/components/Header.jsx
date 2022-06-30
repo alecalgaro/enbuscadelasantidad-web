@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import imgBackgroud from '../img/bg-header.webp'
-import imgLogoHeader from '../img/logo-header.webp'
-import iconSpanish from '../img/icons/icon-español.png'
-import iconInglish from '../img/icons/icon-ingles.png'
-import iconItalian from '../img/icons/icon-italiano.png'
-import iconPortuguese from '../img/icons/icon-portugues.png'
-import iconFrench from '../img/icons/icon-frances.png'
+import imgLogoEs from '../img/logo-header-es.webp'
+import imgLogoEn from '../img/logo-header-en.webp'
+import imgLogoIt from '../img/logo-header-it.webp'
+import imgLogoPt from '../img/logo-header-pt.webp'
+import imgLogoFr from '../img/logo-header-fr.webp'
+import iconSpanish from '../img/icons/icon-spanish.webp'
+import iconEnglish from '../img/icons/icon-english.webp'
+import iconItalian from '../img/icons/icon-italian.webp'
+import iconPortuguese from '../img/icons/icon-portuguese.webp'
+import iconFrench from '../img/icons/icon-french.webp'
 import data from './data.json'
 
 import { motion } from "framer-motion"
@@ -27,7 +31,7 @@ const Header = ({i}) => {
         transition={{duration: .8}}
         >
         <Logo>
-          <h1><img src={imgLogoHeader} alt="logo header"/></h1>
+          <h1><img src={data[i].img_logo} alt="logo header"/></h1>
         </Logo>
 
         <HeaderDescription>
@@ -44,11 +48,11 @@ const Header = ({i}) => {
         </HeaderDescription>
 
         <LanguagesButtons>
-          <button onClick={() => saveLanguage('español')}><img src={iconSpanish} alt="icono español"/></button> 
-          <button onClick={() => saveLanguage('ingles')}><img src={iconInglish} alt="icono ingles"/></button>
-          <button onClick={() => saveLanguage('italiano')}><img src={iconItalian} alt="icono italiano"/></button>
-          <button onClick={() => saveLanguage('portugues')}><img src={iconPortuguese} alt="icono portugues"/></button>
-          <button onClick={() => saveLanguage('frances')}><img src={iconFrench} alt="icono frances"/></button>
+          <button onClick={() => saveLanguage('spanish')}><img src={iconSpanish} alt="icono español"/></button> 
+          <button onClick={() => saveLanguage('english')}><img src={iconEnglish} alt="icono ingles"/></button>
+          <button onClick={() => saveLanguage('italian')}><img src={iconItalian} alt="icono italiano"/></button>
+          <button onClick={() => saveLanguage('portuguese')}><img src={iconPortuguese} alt="icono portugues"/></button>
+          <button onClick={() => saveLanguage('french')}><img src={iconFrench} alt="icono frances"/></button>
         </LanguagesButtons>
       </HeaderContainer>
     </>

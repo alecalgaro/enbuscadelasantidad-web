@@ -1,6 +1,6 @@
 [
 	{
-        "language": "español",
+        "language": "spanish",
 		"nav_about": "Nosotros",
         "nav_play": "Jugar",
         "nav_donate": "Colaborar",
@@ -11,6 +11,7 @@
         "header3": "Te invitamos a esta nueva aventura, en la cual nos vamos a divertir y aprender cosas importantes sobre la Infancia y Adolescencia Misionera (IAM), todo esto haciendo algo que seguro te gusta… ¡Jugar!",
         "btn_trailer": "Trailer",
         "btn_play": "Jugar",
+        "img_logo": "/src/img/logo-header-es.webp",
 
         "title_about": "Nosotros",
         "about1": "¡Hola! Somos Guadalupe Rodriguez (estudiante de Licenciatura en Diseño de la Comunicación Visual) y Alejandro Calgaro (estudiante de Ingeniería en Informática).",
@@ -49,7 +50,57 @@
     },
 
     {
-        "language": "italiano",
+        "language": "english",
+		"nav_about": "Nosotros",
+        "nav_play": "Jugar",
+        "nav_donate": "Colaborar",
+        "nav_contact": "Contacto",
+
+        "header1": "Te damos la bienvenida a",
+        "header2": "EN BUSCA DE LA SANTIDAD",
+        "header3": "Te invitamos a esta nueva aventura, en la cual nos vamos a divertir y aprender cosas importantes sobre la Infancia y Adolescencia Misionera (IAM), todo esto haciendo algo que seguro te gusta… ¡Jugar!",
+        "btn_trailer": "Trailer",
+        "btn_play": "Jugar",
+        "img_logo": "/src/img/logo-header-en.webp",
+
+        "title_about": "Nosotros",
+        "about1": "¡Hola! Somos Guadalupe Rodriguez (estudiante de Licenciatura en Diseño de la Comunicación Visual) y Alejandro Calgaro (estudiante de Ingeniería en Informática).",
+        "about2": "Ambos somos animadores de la Infancia y Adolescencia Misionera, que buscamos utilizar nuestros estudios y las cosas que nos gustan hacer, para evangelizar.",
+
+        "title_game": "Juego",
+        "play1": "La idea de este videojuego es acompañar a tu personaje en el camino hacia la santidad, recorriendo el maravilloso mundo de la Infancia y Adolescencia Misionera. Lo podrás descargar en tu dispositivo móvil, en tu computadora o jugarlo de forma online sin descargar.", 
+        "play2": "(Te recomendamos descargarlo para evitar cualquier error al cargar el juego).",
+        "btn_download": "Descargar",
+        "tutorial": "Tutorial",
+
+        "title_donate": "Colaborar",
+        "donate": "Si te gustaría colaborar con nosotros, podes hacerlo a través de los siguientes medios o comunicándote con nosotros para coordinar. ¡Muchas gracias!",
+        "mercado_pago": "Mercado Pago",
+        "mercado_pago2": "Desde Argentina podes colaborar mediante la plataforma de “Cafecito.app” eligiendo el monto que quieras donar, o mediante el CVU.",
+        "paypal": "Paypal",
+        "paypal2": "Fuera de Argentina podes colaborar mediante la plataforma de “Paypal” eligiendo el monto que quieras donar.",
+        
+        "title_contact": "Contacto",
+        "contact": "Por cualquier consulta o sugerencia, podes comunicarte con nosotros enviando tu mensaje o escribiéndonos en nuestras redes sociales.",
+        "instagram": "Instagram",
+        "form": "Formulario de contacto",
+        "email": "Correo electrónico",
+        "name": "Nombre",
+        "message": "Mensaje",
+        "send": "Enviar",
+
+        "footer1": "Sitio web diseñado y creado por",
+        "footer2": "Alejandro Calgaro ",
+        "footer3": "y Guadalupe Rodriguez",
+        "footer4": "Se reserva el uso del contenido del videojuego y de este sitio web solo para fines pastorales.",
+
+        "cookies": "Utilizamos cookies para obtener estadísticas y mejorar nuestro sitio.",
+        "accept": "Aceptar",
+        "more": "Leer más"
+    },
+
+    {
+        "language": "italian",
 		"nav_about": "Noi",
         "nav_play": "Gioco",
         "nav_donate": "Collaborare",
@@ -60,6 +111,7 @@
         "header3": "Vi invitiamo a questa nuova avventura, in cui ci divertiremo e impareremo cose importanti sull'Infanzia Missionaria, il tutto facendo qualcosa che siamo sicuri vi piacerà… Giocare!",
         "btn_trailer": "Trailer",
         "btn_play": "Gioco",
+        "img_logo": "/src/img/logo-header-it.webp",
 
         "title_about": "Noi",
         "about1": "Ciao. Siamo Guadalupe Rodriguez (studente di Visual Communication Design) e Alejandro Calgaro (studente di Ingegneria Informatica).",
@@ -98,7 +150,7 @@
     },
 
     {
-        "language": "portugues",
+        "language": "portuguese",
 		"nav_about": "SOBRE NÓS",
         "nav_play": "JOGO",
         "nav_donate": "COLABORAR",
@@ -109,6 +161,7 @@
         "header3": "Te convidamos para esta nova aventura, onde vamos nos divertir e aprender mais sobre a Infância e Adolescência Missionária (IAM), tudo isto fazendo algo que você gosta... jogar!",
         "btn_trailer": "Trailer",
         "btn_play": "Jogar",
+        "img_logo": "/src/img/logo-header-pt.webp",
 
         "title_about": "SOBRE NÓS",
         "about1": "Olá! somos Guadalupe Rodriguez (estudante de Design de Comunicação Visual) e Alejandro Calgaro (estudante de Engenharia Informática).",
@@ -144,5 +197,55 @@
         "cookies": "Utilizamos cookies para obter estatísticas e melhorar nosso site.",
         "accept": "Aceitar",
         "more": "Ler mais"
+    },
+
+    {
+        "language": "french",
+		"nav_about": "Nosotros",
+        "nav_play": "Jugar",
+        "nav_donate": "Colaborar",
+        "nav_contact": "Contacto",
+
+        "header1": "Te damos la bienvenida a",
+        "header2": "EN BUSCA DE LA SANTIDAD",
+        "header3": "Te invitamos a esta nueva aventura, en la cual nos vamos a divertir y aprender cosas importantes sobre la Infancia y Adolescencia Misionera (IAM), todo esto haciendo algo que seguro te gusta… ¡Jugar!",
+        "btn_trailer": "Trailer",
+        "btn_play": "Jugar",
+        "img_logo": "/src/img/logo-header-fr.webp",
+
+        "title_about": "Nosotros",
+        "about1": "¡Hola! Somos Guadalupe Rodriguez (estudiante de Licenciatura en Diseño de la Comunicación Visual) y Alejandro Calgaro (estudiante de Ingeniería en Informática).",
+        "about2": "Ambos somos animadores de la Infancia y Adolescencia Misionera, que buscamos utilizar nuestros estudios y las cosas que nos gustan hacer, para evangelizar.",
+
+        "title_game": "Juego",
+        "play1": "La idea de este videojuego es acompañar a tu personaje en el camino hacia la santidad, recorriendo el maravilloso mundo de la Infancia y Adolescencia Misionera. Lo podrás descargar en tu dispositivo móvil, en tu computadora o jugarlo de forma online sin descargar.", 
+        "play2": "(Te recomendamos descargarlo para evitar cualquier error al cargar el juego).",
+        "btn_download": "Descargar",
+        "tutorial": "Tutorial",
+
+        "title_donate": "Colaborar",
+        "donate": "Si te gustaría colaborar con nosotros, podes hacerlo a través de los siguientes medios o comunicándote con nosotros para coordinar. ¡Muchas gracias!",
+        "mercado_pago": "Mercado Pago",
+        "mercado_pago2": "Desde Argentina podes colaborar mediante la plataforma de “Cafecito.app” eligiendo el monto que quieras donar, o mediante el CVU.",
+        "paypal": "Paypal",
+        "paypal2": "Fuera de Argentina podes colaborar mediante la plataforma de “Paypal” eligiendo el monto que quieras donar.",
+        
+        "title_contact": "Contacto",
+        "contact": "Por cualquier consulta o sugerencia, podes comunicarte con nosotros enviando tu mensaje o escribiéndonos en nuestras redes sociales.",
+        "instagram": "Instagram",
+        "form": "Formulario de contacto",
+        "email": "Correo electrónico",
+        "name": "Nombre",
+        "message": "Mensaje",
+        "send": "Enviar",
+
+        "footer1": "Sitio web diseñado y creado por",
+        "footer2": "Alejandro Calgaro ",
+        "footer3": "y Guadalupe Rodriguez",
+        "footer4": "Se reserva el uso del contenido del videojuego y de este sitio web solo para fines pastorales.",
+
+        "cookies": "Utilizamos cookies para obtener estadísticas y mejorar nuestro sitio.",
+        "accept": "Aceptar",
+        "more": "Leer más"
     }
 ]

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SectionTitle from './SectionTitle'
 import data from './data.json'
-import iconDonate from '../img/icons/icono-colaborar.webp'
+import iconDonate from '../img/icons/icon-colaborar.webp'
 
 const Donate = ({i}) => {
   return (
@@ -74,7 +74,10 @@ const Card = styled.div`
     width: 80%;
     margin-bottom: 3rem;
 
-    img{ margin: 3rem 0; }
+    img{ 
+      margin: 3rem 0; 
+      width: 8rem;
+    }
 
     h3{
         font-size: 2rem;

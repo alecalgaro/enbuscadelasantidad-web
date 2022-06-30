@@ -8,10 +8,12 @@ import slide_2 from '../img/slide-2.webp'
 import slide_3 from '../img/slide-3.webp'
 import slide_4 from '../img/slide-4.webp'
 import slide_5 from '../img/slide-5.webp'
-import iconCel from '../img/icons/icono-celular.webp'
-import iconPC from '../img/icons/icono-compu.webp'
-import iconOnline from '../img/icons/icono-online.webp'
-import iconFlecha from '../img/icons/flecha.png'
+import iconCel from '../img/icons/icon-celular.webp'
+import iconPC from '../img/icons/icon-pc.webp'
+import iconOnline from '../img/icons/icon-online.webp'
+import iconFlechaRoja from '../img/icons/flecha_roja.webp'
+import iconFlechaAmarilla from '../img/icons/flecha_amarilla.webp'
+import iconFlechaAzul from '../img/icons/flecha_azul.webp'
 
 const Game = ({i}) => {
   return (
@@ -67,17 +69,17 @@ const Game = ({i}) => {
       <Buttons>
         <IconContainer>
           <img src={iconCel} alt="icono celular"></img>
-          <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
+          <img src={iconFlechaRoja} alt="icono flecha" className="icon-flecha"></img>
           <Button className='btn-cel'>{data[i].btn_download}</Button>
         </IconContainer>
         <IconContainer>
           <img src={iconPC} alt="icono computadora"></img>
-          <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
+          <img src={iconFlechaAmarilla} alt="icono flecha" className="icon-flecha"></img>
           <Button className='btn-pc'>{data[i].btn_download}</Button>
         </IconContainer>
         <IconContainer>
           <img src={iconOnline} alt="icono online"></img>
-          <img src={iconFlecha} alt="icono flecha" className="icon-flecha"></img>
+          <img src={iconFlechaAzul} alt="icono flecha" className="icon-flecha"></img>
           <Button className='btn-online'>{data[i].btn_play}</Button>
         </IconContainer>
       </Buttons>
@@ -139,13 +141,19 @@ const IconContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 4rem 2rem 0 2rem;
-  gap: 2rem;
 
-  @media(min-width: 768px){
-    margin: 2rem 2rem 0 2rem;
+  img {
+    width: 8rem;
   }
 
-  .icon-flecha { width: 18%; }
+  @media(min-width: 768px){
+    margin: 2rem 4rem 0 2rem;
+  }
+
+  .icon-flecha { 
+    width: 6rem; 
+    margin: 0 1rem 0 3rem;
+  }
 `
 
 const Button = styled.button`

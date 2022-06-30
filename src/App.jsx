@@ -19,11 +19,11 @@ function App() {
   }, []);
   
   // A los componentes se les pasa "i" para elegir que lenguaje tomar del .json, para evitar evaluar cosas en cada componente
-  { language == 'español' ? i = 0
-    : language == 'italiano' ? i = 1
-    : language == 'ingles' ? i = 2
-    : language == 'portugues' ? i = 3
-    : language == 'frances' ? i = 4
+  { language == 'spanish' ? i = 0
+    : language == 'english' ? i = 1
+    : language == 'italian' ? i = 2
+    : language == 'portuguese' ? i = 3
+    : language == 'french' ? i = 4
     : i = 0   // frances
   }
 

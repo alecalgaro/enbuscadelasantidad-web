@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import data from './data.json'
 import SectionTitle from './SectionTitle'
-import iconInstagram from '../img/icons/icono-instagram.webp'
+import iconInstagram from '../img/icons/icon-instagram.png'
 
 const Contact = ({i}) => {
   return (
@@ -20,9 +20,9 @@ const Contact = ({i}) => {
           
           <div className='form'>
             <h4>{data[i].form}</h4>
-            <form className="col-12 col-md-10 col-lg-8" id="formulario">
+            <form className="col-12 col-md-10 col-lg-8" id="formulario" action="https://api.web3forms.com/submit" method="POST">
                 {/* Clave para el envío con web3forms. Se puede cambiar la clave desde la página, sin registro, solo poniendo un correo */}
-                <input type="hidden" name="apikey" value="8a503d3c-c02a-4a1d-a5f7-036ad98b9f94" />
+                <input type="hidden" name="apikey" value="51989a6a-ecd8-4307-ac13-4ed6e2251bd3" />
                 {/* Asunto al recibir el mensaje con web3forms */}
                 <input type="hidden" name="from_name" value="En busca de la santidad" />
 
@@ -38,6 +38,7 @@ const Contact = ({i}) => {
                     <label htmlFor="mensaje" className="form-label">{data[i].message}</label>
                     <textarea className="form-control" id="mensaje" rows="3" name="mensaje" placeholder={data[i].message} required></textarea>
                 </div>
+                <input type="hidden" name="redirect" value="http://localhost:3000/#contact"></input>
                 <button type="submit" name="enviar" id="submit">{data[i].send}</button>
             </form>
           </div>
