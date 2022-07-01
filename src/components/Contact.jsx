@@ -9,7 +9,7 @@ const Contact = ({i}) => {
     <ContactContainer id="contact">
         <SectionTitle title={data[i].title_contact} />
         
-        <p>{data[i].contact}</p>
+        <div className='description'><p>{data[i].contact}</p></div>
         
         <div className='contact'>
 
@@ -55,15 +55,25 @@ const ContactContainer = styled.section`
   justify-content: center;
   align-items: center;
 
-  p{
-    font-size: 1.6rem;
-    color: var(--grey-text);
-    width: 85%;
-    text-align: center;
+  .description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-grey);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 80%;
     margin-bottom: 2rem;
+    
+    @media(min-width: 768px){
+        width: 50%;
+    }
 
-    @media(min-width: 992px){
-      width: 50%;
+    p{
+      font-size: 1.6rem;
+      color: var(--grey-text);
+      text-align: center;
+      margin: 1rem;
     }
   }
 

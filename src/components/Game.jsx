@@ -25,8 +25,8 @@ const Game = ({i}) => {
           <p>{data[i].play1}
             <br />{data[i].play2}
           </p>
-
-          <Carousel className="col-11 col-lg-9 mb-5 shadow-lg bg-light rounded">
+        </div>
+          <Carousel className="carousel col-11 col-lg-8 mb-5 shadow-lg bg-light rounded">
             <Carousel.Item>
               <img
                 className="d-block w-100"
@@ -63,24 +63,24 @@ const Game = ({i}) => {
               />
             </Carousel.Item>
           </Carousel>
-        </div>
+        
       </GameContainer>
       
       <Buttons>
         <IconContainer>
           <img src={iconCel} alt="icono celular"></img>
           <img src={iconFlechaRoja} alt="icono flecha" className="icon-flecha"></img>
-          <Button className='btn-cel'>{data[i].btn_download}</Button>
+          <Button className='btn-cel'><a href="https://enbuscadelasantidad.itch.io/juego" target="_blank">{data[i].btn_download}</a></Button>
         </IconContainer>
         <IconContainer>
           <img src={iconPC} alt="icono computadora"></img>
           <img src={iconFlechaAmarilla} alt="icono flecha" className="icon-flecha"></img>
-          <Button className='btn-pc'>{data[i].btn_download}</Button>
+          <Button className='btn-pc'><a href="https://enbuscadelasantidad.itch.io/juego" target="_blank">{data[i].btn_download}</a></Button>
         </IconContainer>
         <IconContainer>
           <img src={iconOnline} alt="icono online"></img>
           <img src={iconFlechaAzul} alt="icono flecha" className="icon-flecha"></img>
-          <Button className='btn-online'>{data[i].btn_play}</Button>
+          <Button className='btn-online'><a href="https://enbuscadelasantidad.itch.io/juego" target="_blank">{data[i].btn_play}</a></Button>
         </IconContainer>
       </Buttons>
     </>
@@ -108,20 +108,19 @@ const GameContainer = styled.section`
     margin-bottom: 2rem;
 
     @media(min-width: 768px){
-      width: 80%;
+      width: 70%;
     }
   }
 
   p{
     font-size: 1.5rem;
     text-align: center;
-    margin: 3rem 0;
+    margin: 2rem;
     color: var(--grey-text);
-    width: 90%;
+  }
 
-    @media(min-width: 768px){
-      width: 70%;
-    }
+  .carousel{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
 `
 const Buttons = styled.div`
@@ -146,13 +145,19 @@ const IconContainer = styled.div`
     width: 8rem;
   }
 
-  @media(min-width: 768px){
-    margin: 2rem 4rem 0 2rem;
+  .icon-flecha { 
+    width: 7rem; 
+    margin: 0 1rem 0 3rem;
   }
 
-  .icon-flecha { 
-    width: 6rem; 
-    margin: 0 1rem 0 3rem;
+  @media(min-width: 992px){
+    margin: 2rem 3rem 0 2rem;
+    img {
+      width: 7rem;
+    }
+    .icon-flecha { 
+      width: 5rem; 
+    }
   }
 `
 
@@ -162,7 +167,6 @@ const Button = styled.button`
   height: 3rem;
   font-size: 1.8rem;
   font-weight: 300;
-  color: var(--white);
   border-radius: 1rem;
   cursor: pointer;
   transition: all .5s;
@@ -171,7 +175,9 @@ const Button = styled.button`
   &.btn-pc{ background: var(--amarillo); }
   &.btn-online{ background: var(--celeste); }
 
+  a{ color: var(--white); }
+
   &:hover{
     letter-spacing: .1rem;
-  }
+  }  
 `

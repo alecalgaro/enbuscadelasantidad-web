@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import imgBackgroud from '../img/bg-header.webp'
+import imgBackgroud from '../img/fondo.webp'
 import imgLogoEs from '../img/logo-header-es.webp'
 import imgLogoEn from '../img/logo-header-en.webp'
 import imgLogoIt from '../img/logo-header-it.webp'
@@ -67,6 +67,17 @@ const ImageBackground = styled.img`
     position: fixed;
     top: 0;
     z-index: -1;
+    object-fit: cover;
+    animation: animacion-fondo 20s linear infinite alternate-reverse;
+
+    @keyframes animacion-fondo {
+    from{
+      object-position: -1000px 0;
+    }
+    to{
+      object-position: 0 0;
+    }
+}
 `
 
 const HeaderContainer = styled(motion.section)`
@@ -85,7 +96,7 @@ const HeaderContainer = styled(motion.section)`
 const Logo = styled(motion.div)`
   img {
       width: 28rem;
-      animation: logo 1.85s infinite alternate-reverse;
+      animation: logo 1.85s linear infinite alternate-reverse;
 
       @media (min-width: 756px) {
           width: 35rem;
@@ -108,7 +119,7 @@ const HeaderDescription = styled(motion.div)`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.5rem;
   order: 1;
 
   h1{

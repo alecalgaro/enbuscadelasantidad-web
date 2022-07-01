@@ -9,21 +9,21 @@ const Donate = ({i}) => {
     <DonateContainer id="donate">
         <SectionTitle title={data[i].title_donate}/>
 
-        <p className='description'>{data[i].donate}</p>
-
+        <div className='description'><p>{data[i].donate}</p></div>
+      
         <div className='contenido'>
             <Card>
                 <img src={iconDonate} alt="Icono colaborar" />
                 <h3>{data[i].mercado_pago}</h3>
                 <p>{data[i].mercado_pago2}</p>
-                <button>{data[i].title_donate}</button>
+                <button><a href="https://cafecito.app/enbuscadelasantidad" target="_blank">{data[i].title_donate}</a></button>
             </Card>
 
             <Card>
                 <img src={iconDonate} alt="Icono colaborar" />
                 <h3>{data[i].paypal}</h3>
                 <p>{data[i].paypal2}</p>
-                <button>{data[i].title_donate}</button>
+                <button><a href="https://www.paypal.com/paypalme/alejandrocalgaro" target="_blank">{data[i].title_donate}</a></button>
             </Card>
         </div>
     </DonateContainer>
@@ -40,14 +40,24 @@ const DonateContainer = styled.section`
   margin: 0 .5rem 0 .5rem;
 
   .description{
-    font-size: 1.6rem;
-    color: var(--grey-text);
-    width: 85%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-grey);
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 80%;
     margin-bottom: 2rem;
+    
+    @media(min-width: 768px){
+        width: 50%;
+    }
 
-    @media(min-width: 992px){
-      width: 50%;
+    p{
+      font-size: 1.6rem;
+      color: var(--grey-text);
+      text-align: center;
+      margin: 1rem;
     }
   }
 
@@ -100,17 +110,18 @@ const Card = styled.div`
         margin-bottom: 3rem;
         font-size: 1.8rem;
         font-weight: 300;
-        color: var(--white);
         border-radius: 1rem;
         cursor: pointer;
         background-color: var(--rojo);
         transition: all .5s;
 
+        a{ color: var(--white); }
+
         &:hover{
-            color: var(--rojo);
             background-color: var(--white);
             border: 1px solid var(--rojo);
-        }
+            a{ color: var(--rojo); }
+        }  
     }
 
     @media(min-width: 768px){
