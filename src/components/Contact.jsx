@@ -107,6 +107,14 @@ const ContactContainer = styled.section`
       align-items: center;
       margin-bottom: 2rem;
     }
+
+    .icon{
+      transition: all .3s;
+    }
+
+    .icon:hover{
+      transform: scale(1.1);
+    }
   }
 
   .form{
@@ -131,10 +139,10 @@ const ContactContainer = styled.section`
       border-radius: 1rem;
       color: var(--white);
       cursor: pointer;
-      transition: all .5s;
+      transition: all .3s;
 
       &:hover{
-        letter-spacing: .2rem;
+        transform: scale(1.1);
       }
     }
   }

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { createGlobalStyle } from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Cookies from './components/Cookies'
 import Header from './components/Header'
 import Navbar from './components/Navbar'
 import About from './components/About'
@@ -12,10 +13,12 @@ import Contact from './components/Contact'
 function App() {
 
   const [language, setLanguage] = useState('');
+  const [cookies, setCookies] = useState('');
   var i = 0;
   
   useEffect(() => {
     setLanguage(localStorage.getItem('language'));
+    setCookies(localStorage.getItem('cookies'));
   }, []);
   
   // A los componentes se les pasa "i" para elegir que lenguaje tomar del .json, para evitar evaluar cosas en cada componente
@@ -31,6 +34,7 @@ function App() {
     <>
     <GlobalStyle />
     <Navbar i={i}/>
+    {cookies == "accept" ? null : <Cookies i={i}/>}
     <header>
       <Header i={i}/>  
     </header>

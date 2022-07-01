@@ -62,10 +62,15 @@ const AboutCard = styled.div`
     gap: 5rem;
   }
 
-  img.icon{ 
+  .icon{ 
       width: 3.5rem;
       padding: 0 0 2rem 0; 
-    }
+      transition: all .5s;
+  }
+
+  .icon:hover {
+      transform: scale(1.2)
+  }  
 
   @media(min-width: 576px){
     width: 60%;

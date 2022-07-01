@@ -72,5 +72,8 @@ const NavContainer = styled.nav`
 
   div { display: flex; }
 
-  img { width: 2.5rem; }
+  img { 
+    width: 3.5rem; 
+    padding-bottom: 1rem;  
+  }
 `

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import imgBackgroud from '../img/fondo.webp'
 
+import imgBackgroud from '../img/fondo.webp'
 import iconSpanish from '../img/icons/icon-spanish.webp'
 import iconEnglish from '../img/icons/icon-english.webp'
 import iconItalian from '../img/icons/icon-italian.webp'
@@ -159,12 +159,12 @@ const Buttons = styled(motion.div)`
     font-weight: 300;
     border-radius: 1rem;
     cursor: pointer;
-    transition: all .5s;
+    transition: all .3s;
 
     a{ color: var(--white); }
 
     &:hover{
-      letter-spacing: .2rem;
+      transform: scale(1.1);
     }
   } 
 `
@@ -179,6 +179,15 @@ const LanguagesButtons = styled.div`
       border: none;
       background: none;
       cursor: pointer;
-      transform: scale(0.8);
+      
+      transition: all .3s;
+
+      &:hover{
+        transform: scale(1.2);
+      }
+
+      img{
+        width: 4rem;
+      }
     }
 `

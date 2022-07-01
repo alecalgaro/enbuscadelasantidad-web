@@ -113,14 +113,12 @@ const Card = styled.div`
         border-radius: 1rem;
         cursor: pointer;
         background-color: var(--rojo);
-        transition: all .5s;
+        transition: all .3s;
 
         a{ color: var(--white); }
 
         &:hover{
-            background-color: var(--white);
-            border: 1px solid var(--rojo);
-            a{ color: var(--rojo); }
+          transform: scale(1.1);
         }  
     }
 

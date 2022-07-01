@@ -51,13 +51,6 @@ const Game = ({i}) => {
                 alt="Slide 4"
               />
             </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src={data[i].slide5}
-                alt="Slide 5"
-              />
-            </Carousel.Item>
           </Carousel>
         
       </GameContainer>
@@ -165,7 +158,7 @@ const Button = styled.button`
   font-weight: 300;
   border-radius: 1rem;
   cursor: pointer;
-  transition: all .5s;
+  transition: all .3s;
 
   &.btn-cel{ background: var(--rojo); }
   &.btn-pc{ background: var(--amarillo); }
@@ -174,6 +167,6 @@ const Button = styled.button`
   a{ color: var(--white); }
 
   &:hover{
-    letter-spacing: .1rem;
+    transform: scale(1.1);
   }  
 `
