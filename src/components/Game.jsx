@@ -3,11 +3,7 @@ import styled from 'styled-components'
 import SectionTitle from './SectionTitle'
 import { Carousel } from 'react-bootstrap';
 import data from './data.json'
-import slide_1 from '../img/slide-1.webp'
-import slide_2 from '../img/slide-2.webp'
-import slide_3 from '../img/slide-3.webp'
-import slide_4 from '../img/slide-4.webp'
-import slide_5 from '../img/slide-5.webp'
+
 import iconCel from '../img/icons/icon-celular.webp'
 import iconPC from '../img/icons/icon-pc.webp'
 import iconOnline from '../img/icons/icon-online.webp'
@@ -30,35 +26,35 @@ const Game = ({i}) => {
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={slide_1}
+                src={data[i].slide1}
                 alt="Slide 1"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={slide_2}
+                src={data[i].slide2}
                 alt="Slide 2"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={slide_3}
+                src={data[i].slide3}
                 alt="Slide 3"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={slide_4}
+                src={data[i].slide4}
                 alt="Slide 4"
               />
             </Carousel.Item>
             <Carousel.Item>
               <img
                 className="d-block w-100"
-                src={slide_5}
+                src={data[i].slide5}
                 alt="Slide 5"
               />
             </Carousel.Item>

@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import SectionTitle from './SectionTitle'
 import data from './data.json'
-import imgAbout from '../img/img-about.webp'
 import iconInstagram from '../img/icons/icon-instagram.png'
 
 const About = ({i}) => {
@@ -10,7 +9,7 @@ const About = ({i}) => {
       <AboutContainer id='about'>
           <SectionTitle title={data[i].title_about}/>
           <AboutCard>
-              <img src={imgAbout} alt="Foto de nosotros" />
+              <img src={data[i].img_about} alt="Foto de nosotros" />
               <div className='about-description'>
                 <p>{data[i].about1} 
                   <br />{data[i].about2}</p>

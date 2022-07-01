@@ -1,11 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import imgBackgroud from '../img/fondo.webp'
-import imgLogoEs from '../img/logo-header-es.webp'
-import imgLogoEn from '../img/logo-header-en.webp'
-import imgLogoIt from '../img/logo-header-it.webp'
-import imgLogoPt from '../img/logo-header-pt.webp'
-import imgLogoFr from '../img/logo-header-fr.webp'
+
 import iconSpanish from '../img/icons/icon-spanish.webp'
 import iconEnglish from '../img/icons/icon-english.webp'
 import iconItalian from '../img/icons/icon-italian.webp'
