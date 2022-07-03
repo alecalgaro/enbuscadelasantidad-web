@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 
 import imgBackgroud from '../img/fondo.webp'
@@ -7,16 +7,20 @@ import iconEnglish from '../img/icons/icon-english.webp'
 import iconItalian from '../img/icons/icon-italian.webp'
 import iconPortuguese from '../img/icons/icon-portuguese.webp'
 import iconFrench from '../img/icons/icon-french.webp'
+import iconLanguages from '../img/icons/icon-idiomas.png'
 import data from './data.json'
 
 import { motion } from "framer-motion"
 
-const saveLanguage = (language) => {
-  localStorage.setItem('language', language);
-  window.location.reload();   // actualiza la pagina
-}
-
 const Header = ({i}) => {
+
+  const saveLanguage = (language) => {
+    localStorage.setItem('language', language);
+    window.location.reload();   // actualiza la pagina
+  }
+
+  const [showIcons, setShowIcons] = useState(false);
+
   return (
     <>
       <ImageBackground src={imgBackgroud} className="img-background" alt="imagen de fondo" />
@@ -43,13 +47,16 @@ const Header = ({i}) => {
           </Buttons>
         </HeaderDescription>
 
-        <LanguagesButtons>
-          <button onClick={() => saveLanguage('spanish')}><img src={iconSpanish} alt="icono español"/></button> 
-          <button onClick={() => saveLanguage('english')}><img src={iconEnglish} alt="icono ingles"/></button>
-          <button onClick={() => saveLanguage('italian')}><img src={iconItalian} alt="icono italiano"/></button>
-          <button onClick={() => saveLanguage('portuguese')}><img src={iconPortuguese} alt="icono portugues"/></button>
-          <button onClick={() => saveLanguage('french')}><img src={iconFrench} alt="icono frances"/></button>
-        </LanguagesButtons>
+        <Languages>
+          <LanguagesButtons showIcons={showIcons}>
+            <button onClick={() => saveLanguage('spanish')}><img src={iconSpanish} alt="icono español"/></button> 
+            <button onClick={() => saveLanguage('english')}><img src={iconEnglish} alt="icono ingles"/></button>
+            <button onClick={() => saveLanguage('italian')}><img src={iconItalian} alt="icono italiano"/></button>
+            <button onClick={() => saveLanguage('portuguese')}><img src={iconPortuguese} alt="icono portugues"/></button>
+            <button onClick={() => saveLanguage('french')}><img src={iconFrench} alt="icono frances"/></button>
+          </LanguagesButtons>
+          <button onClick={() => setShowIcons(!showIcons)}><img src={iconLanguages} alt="icono idiomas"/></button>
+        </Languages>
       </HeaderContainer>
     </>
   )
@@ -89,7 +96,7 @@ const HeaderContainer = styled(motion.section)`
   }
 `
 
-const Logo = styled(motion.div)`
+const Logo = styled.div`
   img {
       width: 28rem;
       animation: logo 1.85s linear infinite alternate-reverse;
@@ -110,7 +117,7 @@ const Logo = styled(motion.div)`
     }
 `
 
-const HeaderDescription = styled(motion.div)`
+const HeaderDescription = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,7 +152,7 @@ const HeaderDescription = styled(motion.div)`
   }
 `
 
-const Buttons = styled(motion.div)`
+const Buttons = styled.div`
   display: flex;
   justify-content: center;
   gap: 3rem;
@@ -169,17 +176,16 @@ const Buttons = styled(motion.div)`
   } 
 `
 
-const LanguagesButtons = styled.div`
-    display: flex;
-    position: absolute;
-    top: 4.2rem;
-    gap: 1rem;
+const Languages = styled.div`
+  display: flex;
+  position: absolute;
+  top: 6rem;
+  right: 2rem;
 
-    button{
+  button{
       border: none;
       background: none;
       cursor: pointer;
-      
       transition: all .3s;
 
       &:hover{
@@ -190,4 +196,12 @@ const LanguagesButtons = styled.div`
         width: 4rem;
       }
     }
+`
+
+const LanguagesButtons = styled.div`
+    display: flex;
+    gap: 1rem;
+    transition: all .8s;
+    margin-right: 1.5rem;
+    opacity: ${(props) => (props.showIcons ? 0 : 1)};
 `
