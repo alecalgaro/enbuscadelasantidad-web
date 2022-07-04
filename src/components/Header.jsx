@@ -19,7 +19,7 @@ const Header = ({i}) => {
     window.location.reload();   // actualiza la pagina
   }
 
-  const [showIcons, setShowIcons] = useState(false);
+  const [hideIcons, setHideIcons] = useState(true);
 
   return (
     <>
@@ -48,14 +48,14 @@ const Header = ({i}) => {
         </HeaderDescription>
 
         <Languages>
-          <LanguagesButtons showIcons={showIcons}>
+          <LanguagesButtons hideIcons={hideIcons}>
             <button onClick={() => saveLanguage('spanish')}><img src={iconSpanish} alt="icono español"/></button> 
             <button onClick={() => saveLanguage('english')}><img src={iconEnglish} alt="icono ingles"/></button>
             <button onClick={() => saveLanguage('italian')}><img src={iconItalian} alt="icono italiano"/></button>
             <button onClick={() => saveLanguage('portuguese')}><img src={iconPortuguese} alt="icono portugues"/></button>
             <button onClick={() => saveLanguage('french')}><img src={iconFrench} alt="icono frances"/></button>
           </LanguagesButtons>
-          <button onClick={() => setShowIcons(!showIcons)}><img src={iconLanguages} alt="icono idiomas"/></button>
+          <button onClick={() => setHideIcons(!hideIcons)}><img src={iconLanguages} alt="icono idiomas"/></button>
         </Languages>
       </HeaderContainer>
     </>
@@ -199,9 +199,9 @@ const Languages = styled.div`
 `
 
 const LanguagesButtons = styled.div`
-    display: flex;
+    display: ${(props) => (props.hideIcons ? 'none' : 'flex')};
     gap: 1rem;
-    transition: all .8s;
     margin-right: 1.5rem;
-    opacity: ${(props) => (props.showIcons ? 0 : 1)};
+    /* transition: opacity 1s; */
+    /* opacity: ${(props) => (props.hideIcons ? 0 : 1)}; */
 `
