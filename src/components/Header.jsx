@@ -7,7 +7,7 @@ import iconEnglish from '../img/icons/icon-english.webp'
 import iconItalian from '../img/icons/icon-italian.webp'
 import iconPortuguese from '../img/icons/icon-portuguese.webp'
 import iconFrench from '../img/icons/icon-french.webp'
-import iconLanguages from '../img/icons/icon-idiomas.png'
+import iconLanguages from '../img/icons/icon-idiomas.webp'
 import data from './data.json'
 
 import { motion } from "framer-motion"
@@ -49,11 +49,26 @@ const Header = ({i}) => {
 
         <Languages>
           <LanguagesButtons hideIcons={hideIcons}>
-            <button onClick={() => saveLanguage('spanish')}><img src={iconSpanish} alt="icono español"/></button> 
-            <button onClick={() => saveLanguage('english')}><img src={iconEnglish} alt="icono ingles"/></button>
-            <button onClick={() => saveLanguage('italian')}><img src={iconItalian} alt="icono italiano"/></button>
-            <button onClick={() => saveLanguage('portuguese')}><img src={iconPortuguese} alt="icono portugues"/></button>
-            <button onClick={() => saveLanguage('french')}><img src={iconFrench} alt="icono frances"/></button>
+            <div>
+              <button onClick={() => saveLanguage('spanish')}><img src={iconSpanish} alt="icono español"/></button> 
+              <p>ES</p>
+            </div>
+            <div>
+              <button onClick={() => saveLanguage('english')}><img src={iconEnglish} alt="icono ingles"/></button>
+              <p>EN</p>
+            </div>
+            <div>
+              <button onClick={() => saveLanguage('italian')}><img src={iconItalian} alt="icono italiano"/></button>
+              <p>IT</p>
+            </div>
+            <div>
+              <button onClick={() => saveLanguage('portuguese')}><img src={iconPortuguese} alt="icono portugues"/></button>
+              <p>PT</p>
+            </div>
+            <div>
+              <button onClick={() => saveLanguage('french')}><img src={iconFrench} alt="icono frances"/></button>
+              <p>FR</p>
+            </div>
           </LanguagesButtons>
           <button onClick={() => setHideIcons(!hideIcons)}><img src={iconLanguages} alt="icono idiomas"/></button>
         </Languages>
@@ -178,6 +193,7 @@ const Buttons = styled.div`
 
 const Languages = styled.div`
   display: flex;
+  align-items: flex-start;
   position: absolute;
   top: 6rem;
   right: 2rem;
@@ -204,4 +220,10 @@ const LanguagesButtons = styled.div`
     margin-right: 1.5rem;
     /* transition: opacity 1s; */
     /* opacity: ${(props) => (props.hideIcons ? 0 : 1)}; */
+    p{
+      font-size: 1.2rem;
+      color: var(--grey-text);
+      text-align: center;
+      margin-top: .5rem;
+    }
 `
