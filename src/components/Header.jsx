@@ -89,13 +89,17 @@ const ImageBackground = styled.img`
     animation: animacion-fondo 20s linear infinite alternate-reverse;
 
     @keyframes animacion-fondo {
-    from{
-      object-position: -1000px 0;
-    }
-    to{
-      object-position: 0 0;
-    }
-}
+      from{
+        object-position: -1000px 0;
+      }
+      to{
+        object-position: 0 0;
+      }
+    } 
+
+  @media(max-width: 768px) and (orientation: landscape){
+    animation: none;
+  }
 `
 
 const HeaderContainer = styled(motion.section)`
@@ -108,6 +112,10 @@ const HeaderContainer = styled(motion.section)`
 
   @media(min-width: 992px){
     flex-direction: row-reverse;
+  }
+
+  @media(max-width: 812px) and (orientation: landscape){
+      margin-top: 8rem;
   }
 `
 

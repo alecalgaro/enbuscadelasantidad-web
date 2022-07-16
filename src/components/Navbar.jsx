@@ -13,7 +13,7 @@ function Navbar({i}) {
             <a href="#about">{data[i].nav_about}</a>
             <a href="#play">{data[i].nav_play}</a>
           </div>
-            <a href="#home"><img src={imgLogo} alt="logo helios" /></a>
+            <a href="#home"><img src={imgLogo} alt="logo videojuego" /></a>
           <div className='menu_der'>
             <a href="#donate">{data[i].nav_donate}</a>
             <a href="#contact">{data[i].nav_contact}</a>
