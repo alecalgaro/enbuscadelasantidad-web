@@ -1,57 +1,62 @@
-import React, {useState, useEffect} from 'react'
-import { createGlobalStyle } from 'styled-components'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import Cookies from './components/Cookies'
-import Header from './components/Header'
-import Navbar from './components/Navbar'
-import About from './components/About'
-import Game from './components/Game'
-import Footer from './components/Footer'
-import Donate from './components/Donate'
-import Contact from './components/Contact'
+import React, { useState, useEffect } from "react";
+import { createGlobalStyle } from "styled-components";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Cookies from "./components/Cookies";
+import Header from "./components/Header";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Game from "./components/Game";
+import Footer from "./components/Footer";
+import Donate from "./components/Donate";
+import Contact from "./components/Contact";
 
 function App() {
+	const [language, setLanguage] = useState("");
+	const [cookies, setCookies] = useState("");
+	var i = 0;
 
-  const [language, setLanguage] = useState('');
-  const [cookies, setCookies] = useState('');
-  var i = 0;
-  
-  useEffect(() => {
-    setLanguage(localStorage.getItem('language'));
-    setCookies(localStorage.getItem('cookies'));
-  }, []);
-  
-  // A los componentes se les pasa "i" para elegir que lenguaje tomar del .json, para evitar evaluar cosas en cada componente
-  { language == 'spanish' ? i = 0
-    : language == 'english' ? i = 1
-    : language == 'italian' ? i = 2
-    : language == 'portuguese' ? i = 3
-    : language == 'french' ? i = 4
-    : i = 0   // frances
-  }
+	useEffect(() => {
+		setLanguage(localStorage.getItem("language"));
+		setCookies(localStorage.getItem("cookies"));
+	}, []);
 
-  return (
-    <>
-    <GlobalStyle />
-    <Navbar i={i}/>
-    {cookies == "accept" ? null : <Cookies i={i}/>}
-    <header>
-      <Header i={i}/>  
-    </header>
-    <body>
-      <About i={i}/>
-      <Game i={i}/>
-      <Donate i={i}/>
-      <Contact i={i}/>  
-    </body>
-    <footer>
-      <Footer i={i}/>
-    </footer>
-    </>
-  )
+	// A los componentes se les pasa "i" para elegir que lenguaje tomar del .json, para evitar evaluar cosas en cada componente
+	{
+		language == "spanish"
+			? (i = 0)
+			: language == "english"
+			? (i = 1)
+			: language == "italian"
+			? (i = 2)
+			: language == "portuguese"
+			? (i = 3)
+			: language == "french"
+			? (i = 4)
+			: (i = 0); // frances
+	}
+
+	return (
+		<>
+			<GlobalStyle />
+			<Navbar i={i} />
+			{cookies == "accept" ? null : <Cookies i={i} />}
+			<header>
+				<Header i={i} />
+			</header>
+			<main>
+				<About i={i} />
+				<Game i={i} />
+				<Donate i={i} />
+				<Contact i={i} />
+			</main>
+			<footer>
+				<Footer i={i} />
+			</footer>
+		</>
+	);
 }
 
-export default App
+export default App;
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -88,4 +93,4 @@ const GlobalStyle = createGlobalStyle`
   a {
     text-decoration: none;
   }
-`
+`;
