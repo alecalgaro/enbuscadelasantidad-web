@@ -7,7 +7,7 @@ import iconEnglish from "../img/icons/icon-english.webp";
 import iconItalian from "../img/icons/icon-italian.webp";
 import iconPortuguese from "../img/icons/icon-portuguese.webp";
 import iconFrench from "../img/icons/icon-french.webp";
-import iconLanguages from "../img/icons/icon-idiomas.webp";
+import iconLanguages from "../img/icons/icon-languages.webp";
 import data from "./data.json";
 
 import { motion } from "framer-motion";
@@ -233,24 +233,22 @@ const Buttons = styled.div`
 
 const Languages = styled.div`
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
+	justify-content: center;
 	position: absolute;
-	top: 6rem;
-	right: 2rem;
+	top: 5rem;
+	right: 1rem;
+
+	@media (min-width: 756px) {
+		top: 6rem;
+		right: 2rem;
+	}
 
 	button {
 		border: none;
 		background: none;
 		cursor: pointer;
 		transition: all 0.3s;
-
-		&:hover {
-			transform: scale(1.2);
-		}
-
-		img {
-			width: 4rem;
-		}
 	}
 `;
 
@@ -258,12 +256,19 @@ const LanguagesButtons = styled.div`
 	display: ${(props) => (props.hideIcons ? "none" : "flex")};
 	gap: 1rem;
 	margin-right: 1.5rem;
-	/* transition: opacity 1s; */
-	/* opacity: ${(props) => (props.hideIcons ? 0 : 1)}; */
+
 	p {
 		font-size: 1.2rem;
 		color: var(--grey-text);
 		text-align: center;
-		margin-top: 0.5rem;
+		margin: 0.5rem 0 0 0;
+	}
+
+	img {
+		width: 4rem;
+	}
+
+	button:hover {
+		transform: scale(1.1);
 	}
 `;
