@@ -113,7 +113,7 @@ const ImageBackground = styled.img`
 
 	@keyframes animacion-fondo {
 		from {
-			object-position: -1000px 0;
+			object-position: -800px 0;
 		}
 		to {
 			object-position: 0 0;
