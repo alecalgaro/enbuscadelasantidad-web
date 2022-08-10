@@ -30,9 +30,7 @@ const Header = ({ i }) => {
 				transition={{ duration: 0.8 }}
 			>
 				<Logo>
-					<h1>
-						<img src={data[i].img_logo} alt="logo header" />
-					</h1>
+					<img src={data[i].img_logo} alt="logo header" />
 				</Logo>
 
 				<HeaderDescription>

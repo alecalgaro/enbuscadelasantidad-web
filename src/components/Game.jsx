@@ -37,6 +37,9 @@ const Game = ({ i }) => {
 					<Carousel.Item>
 						<img className="d-block w-100" src={data[i].slide4} alt="Slide 4" />
 					</Carousel.Item>
+					<Carousel.Item>
+						<img className="d-block w-100" src={data[i].slide5} alt="Slide 5" />
+					</Carousel.Item>
 				</Carousel>
 			</GameContainer>
 
