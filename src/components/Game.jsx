@@ -24,7 +24,7 @@ const Game = ({ i }) => {
 						{data[i].play2}
 					</p>
 				</div>
-				<Carousel className="carousel col-11 col-lg-8 mb-5 shadow-lg bg-light rounded">
+				<Carousel className="carousel col-11 col-lg-7 mb-5 shadow-lg bg-light rounded">
 					<Carousel.Item>
 						<img className="d-block w-100" src={data[i].slide1} alt="Slide 1" />
 					</Carousel.Item>
@@ -39,6 +39,9 @@ const Game = ({ i }) => {
 					</Carousel.Item>
 					<Carousel.Item>
 						<img className="d-block w-100" src={data[i].slide5} alt="Slide 5" />
+					</Carousel.Item>
+					<Carousel.Item>
+						<img className="d-block w-100" src={data[i].slide6} alt="Slide 6" />
 					</Carousel.Item>
 				</Carousel>
 			</GameContainer>
