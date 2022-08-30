@@ -75,8 +75,10 @@ const AboutCard = styled.div`
 		transition: all 0.5s;
 	}
 
-	.icon:hover {
-		transform: scale(1.2);
+	@media (hover: hover) {
+		.icon:hover {
+			transform: scale(1.1);
+		}
 	}
 
 	@media (min-width: 576px) {

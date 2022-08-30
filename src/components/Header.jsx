@@ -217,14 +217,21 @@ const Buttons = styled.div`
 		font-weight: 300;
 		border-radius: 1rem;
 		cursor: pointer;
+		border: 2px solid var(--amarillo);
 		transition: all 0.3s;
 
 		a {
 			color: var(--white);
 		}
 
-		&:hover {
-			transform: scale(1.1);
+		@media (hover: hover) {
+			&:hover {
+				background: var(--white);
+
+				a {
+					color: var(--amarillo);
+				}
+			}
 		}
 	}
 `;
@@ -266,7 +273,9 @@ const LanguagesButtons = styled.div`
 		width: 4rem;
 	}
 
-	button:hover {
-		transform: scale(1.1);
+	@media (hover: hover) {
+		button:hover {
+			transform: scale(1.1);
+		}
 	}
 `;

@@ -115,6 +115,7 @@ const GameContainer = styled.section`
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	}
 `;
+
 const Buttons = styled.div`
 	display: flex;
 	flex-direction: column;
@@ -164,20 +165,49 @@ const Button = styled.button`
 	transition: all 0.3s;
 
 	&.btn-cel {
+		border: 2px solid var(--rojo);
 		background: var(--rojo);
+
+		@media (hover: hover) {
+			&:hover {
+				background: var(--white);
+				color: var(--rojo);
+				a {
+					color: var(--rojo);
+				}
+			}
+		}
 	}
 	&.btn-pc {
+		border: 2px solid var(--amarillo);
 		background: var(--amarillo);
+
+		@media (hover: hover) {
+			&:hover {
+				background: var(--white);
+				color: var(--amarillo);
+				a {
+					color: var(--amarillo);
+				}
+			}
+		}
 	}
 	&.btn-online {
+		border: 2px solid var(--celeste);
 		background: var(--celeste);
+
+		@media (hover: hover) {
+			&:hover {
+				background: var(--white);
+				color: var(--celeste);
+				a {
+					color: var(--celeste);
+				}
+			}
+		}
 	}
 
 	a {
 		color: var(--white);
-	}
-
-	&:hover {
-		transform: scale(1.1);
 	}
 `;

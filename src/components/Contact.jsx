@@ -149,8 +149,10 @@ const ContactContainer = styled.section`
 			transition: all 0.3s;
 		}
 
-		.icon:hover {
-			transform: scale(1.1);
+		@media (hover: hover) {
+			.icon:hover {
+				transform: scale(1.1);
+			}
 		}
 	}
 
@@ -178,12 +180,16 @@ const ContactContainer = styled.section`
 			font-size: 1.8rem;
 			font-weight: 300;
 			border-radius: 1rem;
+			border: 2px solid var(--amarillo);
 			color: var(--white);
 			cursor: pointer;
 			transition: all 0.3s;
 
-			&:hover {
-				transform: scale(1.1);
+			@media (hover: hover) {
+				&:hover {
+					background-color: var(--white);
+					color: var(--amarillo);
+				}
 			}
 		}
 	}
