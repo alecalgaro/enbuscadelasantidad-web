@@ -51,7 +51,10 @@ const Game = ({ i }) => {
 					<img src={iconCel} alt="icono celular"></img>
 					<img src={iconFlechaRoja} alt="icono flecha" className="icon-flecha"></img>
 					<Button className="btn-cel">
-						<a href="https://enbuscadelasantidad.itch.io/juego" target="_blank">
+						<a
+							href="https://play.google.com/store/apps/details?id=com.grac.enbuscadelasantidad"
+							target="_blank"
+						>
 							{data[i].btn_download}
 						</a>
 					</Button>
@@ -60,7 +63,7 @@ const Game = ({ i }) => {
 					<img src={iconPC} alt="icono computadora"></img>
 					<img src={iconFlechaAmarilla} alt="icono flecha" className="icon-flecha"></img>
 					<Button className="btn-pc">
-						<a href="https://enbuscadelasantidad.itch.io/juego" target="_blank">
+						<a href="https://enbuscadelasantidad.itch.io/game" target="_blank">
 							{data[i].btn_download}
 						</a>
 					</Button>
@@ -69,7 +72,7 @@ const Game = ({ i }) => {
 					<img src={iconOnline} alt="icono online"></img>
 					<img src={iconFlechaAzul} alt="icono flecha" className="icon-flecha"></img>
 					<Button className="btn-online">
-						<a href="https://enbuscadelasantidad.itch.io/juego" target="_blank">
+						<a href="https://enbuscadelasantidad.itch.io/game" target="_blank">
 							{data[i].btn_play}
 						</a>
 					</Button>

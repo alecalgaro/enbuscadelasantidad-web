@@ -30,7 +30,7 @@ const Contact = ({ i }) => {
 						method="POST"
 					>
 						{/* Clave para el envío con web3forms. Se puede cambiar la clave desde la página, sin registro, solo poniendo un correo */}
-						<input type="hidden" name="apikey" value="51989a6a-ecd8-4307-ac13-4ed6e2251bd3" />
+						<input type="hidden" name="access_key" value="51989a6a-ecd8-4307-ac13-4ed6e2251bd3" />
 						{/* Asunto al recibir el mensaje con web3forms */}
 						<input type="hidden" name="from_name" value="En busca de la santidad" />
 
@@ -73,7 +73,7 @@ const Contact = ({ i }) => {
 								required
 							></textarea>
 						</div>
-						<input type="hidden" name="redirect" value="http://localhost:3000/#contact"></input>
+						<input type="hidden" name="redirect" value="https://enbuscadelasantidad.com"></input>
 						<button type="submit" name="enviar" id="submit">
 							{data[i].send}
 						</button>
