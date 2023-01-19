@@ -43,10 +43,7 @@ const Header = ({ i }) => {
 
 					<Buttons>
 						<button>
-							<a
-								href="https://drive.google.com/file/d/1q4pKuPM2Flax5hUr6_GQjakA33gcMS8d/view?usp=sharing"
-								target="_blank"
-							>
+							<a href="https://www.youtube.com/watch?v=l30qpPzbwNI" target="_blank">
 								{data[0].btn_trailer}
 							</a>
 						</button>
